@@ -24,16 +24,6 @@ if GetDepend(['BSP_USING_SPI_FLASH']):
 if GetDepend(['BSP_USING_FS']):
     src += Glob('port/filesystem.c')
 
-if GetDepend(['BSP_USING_SDIO_ARTPI']):
-    src += Glob('port/drv_sdio.c')
-
-if GetDepend(['BSP_USING_WIFI']):
-    src += Glob('port/wifi_config.c')
-    src += Glob('port/drv_wlan.c')    
-
-if GetDepend(['BSP_USING_ETH_H750']):
-    src += Glob('port/drv_eth.c')
-
 if GetDepend(['PKG_USING_EASYFLASH']):
     src += Glob('port/ef_fal_port.c')
 
@@ -48,11 +38,11 @@ path += [cwd + '/port']
 startup_path_prefix = SDK_LIB
 
 if rtconfig.CROSS_TOOL == 'gcc':
-    src += [startup_path_prefix + '/STM32H7xx_HAL/CMSIS/Device/ST/STM32H7xx/Source/Templates/gcc/startup_stm32h750xx.s']
+    src += [startup_path_prefix + '/STM32H7xx_HAL/CMSIS/Device/ST/STM32H7xx/Source/Templates/gcc/startup_stm32h7b0xx.s']
 elif rtconfig.CROSS_TOOL == 'keil':
-    src += [startup_path_prefix + '/STM32H7xx_HAL/CMSIS/Device/ST/STM32H7xx/Source/Templates/arm/startup_stm32h750xx.s']
+    src += [startup_path_prefix + '/STM32H7xx_HAL/CMSIS/Device/ST/STM32H7xx/Source/Templates/arm/startup_stm32h7b0xx.s']
 elif rtconfig.CROSS_TOOL == 'iar':
-    src += [startup_path_prefix + '/STM32H7xx_HAL/CMSIS/Device/ST/STM32H7xx/Source/Templates/iar/startup_stm32h750xx.s']
+    src += [startup_path_prefix + '/STM32H7xx_HAL/CMSIS/Device/ST/STM32H7xx/Source/Templates/iar/startup_stm32h7b0xx.s']
     
 # STM32H743xx || STM32H750xx || STM32F753xx
 # You can select chips from the list above
