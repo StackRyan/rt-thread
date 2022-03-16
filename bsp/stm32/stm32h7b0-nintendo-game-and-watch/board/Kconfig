@@ -20,6 +20,10 @@ menu "Onboard Peripheral Drivers"
 endmenu
 
 menu "On-chip Peripheral Drivers"
+    config BSP_USING_UART1
+    bool "ENABLE UART1 over unused pin."
+    select BSP_USING_UART
+    default n
 
     source "../libraries/HAL_Drivers/Kconfig"
 
