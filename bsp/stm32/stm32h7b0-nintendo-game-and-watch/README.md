@@ -1,8 +1,8 @@
-# STM32H750-artpi 开发板 BSP 说明
+# STM32H7B0-game-and-watch 开发板 BSP 说明
 
 ## 简介
 
-本文档 为 STM32H750-ART-PI 开发板提供的 BSP (板级支持包) 说明。
+本文档 为 STM32H7B0-game-and-watch 开发板提供的 BSP (板级支持包) 说明。
 
 主要内容如下：
 
@@ -14,7 +14,7 @@
 
 ## 开发板介绍
 
-STM32H750 是RTTHREAD推出的一款基于 ARM Cortex-M7 内核的开发板，最高主频为 480Mhz，该开发板具有丰富的板载资源，可以充分发挥 STM32H750 的芯片性能。
+Game&Watch 是任天堂推出的一款基于 ARM Cortex-M7 内核的游戏机，其配备 STM32H7B0VB MCU 最高主频为 280Mhz，该游戏主板具备优秀的板载资源，不失为一款风格独特的开发板。
 
 开发板外观如下图所示：
 
@@ -22,9 +22,9 @@ STM32H750 是RTTHREAD推出的一款基于 ARM Cortex-M7 内核的开发板，�
 
 该开发板常用 **板载资源** 如下：
 
-- MCU：STM32H750，主频 480MHz，128KB FLASH, 1MB RAM
-- 常用接口：USB 转串口、USB OTG、RGB888等
-- 调试接口，标准 ST-LINK
+- MCU：STM32H7B0VB，主频 280MHz，128KB FLASH, 1MB RAM
+- 常用接口：RGB666、I2S decoder、flash等
+- 调试接口，SWD 接口
 
 开发板更多详细信息请参考[H750-ART-PI](https://www.rt-thread.org/product/153.html)。
 
@@ -126,3 +126,7 @@ RT-Thread [社区论坛](https://club.rt-thread.org/)。
 ## 贡献代码
 
 如果您对 ART-Pi 感兴趣，并有一些好玩的项目愿意与大家分享，欢迎给我们贡献代码，您可以参考 [ART-Pi 代码贡献手册](https://github.com/RT-Thread-Studio/sdk-bsp-stm32h750-realthread-artpi/blob/master/documents/UM5004-RT-Thread ART-Pi 代码贡献手册.md) 。
+
+
+# issue
+1. seggerRtt not inited well.
